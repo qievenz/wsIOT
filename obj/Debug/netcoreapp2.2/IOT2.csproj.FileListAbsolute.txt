@@ -1,0 +1,14 @@
+/home/ivan/Documentos/GIT/IOT/bin/Debug/netcoreapp2.2/IOT.deps.json
+/home/ivan/Documentos/GIT/IOT/bin/Debug/netcoreapp2.2/IOT.runtimeconfig.json
+/home/ivan/Documentos/GIT/IOT/bin/Debug/netcoreapp2.2/IOT.runtimeconfig.dev.json
+/home/ivan/Documentos/GIT/IOT/bin/Debug/netcoreapp2.2/IOT.dll
+/home/ivan/Documentos/GIT/IOT/bin/Debug/netcoreapp2.2/IOT.pdb
+/home/ivan/Documentos/GIT/IOT/obj/Debug/netcoreapp2.2/IOT.csprojAssemblyReference.cache
+/home/ivan/Documentos/GIT/IOT/obj/Debug/netcoreapp2.2/IOT.csproj.CoreCompileInputs.cache
+/home/ivan/Documentos/GIT/IOT/obj/Debug/netcoreapp2.2/IOT.RazorAssemblyInfo.cache
+/home/ivan/Documentos/GIT/IOT/obj/Debug/netcoreapp2.2/IOT.RazorAssemblyInfo.cs
+/home/ivan/Documentos/GIT/IOT/obj/Debug/netcoreapp2.2/IOT.AssemblyInfoInputs.cache
+/home/ivan/Documentos/GIT/IOT/obj/Debug/netcoreapp2.2/IOT.AssemblyInfo.cs
+/home/ivan/Documentos/GIT/IOT/obj/Debug/netcoreapp2.2/IOT.RazorTargetAssemblyInfo.cache
+/home/ivan/Documentos/GIT/IOT/obj/Debug/netcoreapp2.2/IOT.dll
+/home/ivan/Documentos/GIT/IOT/obj/Debug/netcoreapp2.2/IOT.pdb
