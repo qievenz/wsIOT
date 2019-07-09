@@ -76,7 +76,21 @@ namespace IOT.Controllers
         public async Task<ActionResult<Medicion>> PostMedicion(Medicion medicion)
         {
             _context.Medicion.Add(medicion);
-            await _context.SaveChangesAsync();
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (MedicionExists(medicion.MedicionId))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
+            }
 
             return CreatedAtAction("GetMedicion", new { id = medicion.MedicionId }, medicion);
         }

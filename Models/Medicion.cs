@@ -19,11 +19,11 @@ namespace IOT.Models
         public string Fin { get; set; }
         public string Nombre { get; set; }
         [Column("Valor_1")]
-        public double? Valor1 { get; set; }
+        public string Valor1 { get; set; }
         [Column("Valor_2")]
-        public double? Valor2 { get; set; }
+        public string Valor2 { get; set; }
         [Column("Valor_3")]
-        public double? Valor3 { get; set; }
+        public string Valor3 { get; set; }
 
         [ForeignKey("DispositivoId")]
         [InverseProperty("Medicion")]

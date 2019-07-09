@@ -45,9 +45,19 @@ curl -v -d '{"DispositivoID":NULL,"Tipo":"asd","Nombre":"sdf","Descripcion":"dfg
 "Fin":"getdate",
 "Valor":"prueba"}
 
-curl -v -d '{"DispositivoId":1,"SensorId":2,"Inicio":"getdate","Fin":"getdate","Valor":"prueba"}' -H "Content-Type: application/json" --insecure https://localhost:5001/api/Medicion
 
 
+http://192.168.1.145:5001/api/Medicion?Valor3=18.3&SensorId=2&Valor2=24.8&nombre=AIRE&Fin=2019-07-09+18%3A54%3A25&DispositivoId=1&Inicio=2019-07-09+18%3A54%3A24&Valor1=TEST
+curl -v -d '{"DispositivoId":1,"SensorId":2,"Inicio":"tms_inicio","Fin":"tms_fin", "nombre":"dispo", "Valor_1":"accion", "Valor_2":3.2, "Valor_3":2.0}' -H "Content-Type: application/json" --insecure https://localhost:5001/api/Medicion
+
+data = {'DispositivoId':1,
+    'SensorId':2,
+    'Inicio':tms_inicio,
+    'Fin':tms_fin,
+    'nombre':DISPOSITIVO,
+    'Valor1':ACCION,
+    'Valor2':datos[0],
+    'Valor3':datos[1]}
 
 
 ###########################################
