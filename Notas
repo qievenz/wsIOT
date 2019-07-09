@@ -1,0 +1,80 @@
+dotnet new webapi
+
+Configurar BD
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+
+
+generar modelos y context
+dotnet ef dbcontext scaffold "Datasource=/home/ivan/Documentos/GIT/IOT/InternetOfThings" -o Models Microsoft.EntityFrameworkCore.Sqlite -c "APIAppDbContext" -f -d
+
+Cambiar ValueGeneratedNever
+por ValueGeneratedOnAdd
+en APIAppDbContext
+
+generar controladores
+dotnet-aspnet-codegenerator -p "/home/ivan/Documentos/GIT/IOT/IOT.csproj" controller -name DispositivoController -api -f -m IOT.Models.Dispositivo -dc APIAppDbContext -outDir Controllers -namespace IOT.Controllers
+dotnet-aspnet-codegenerator -p "/home/ivan/Documentos/GIT/IOT/IOT.csproj" controller -name MedicionController -api -f -m IOT.Models.Medicion -dc APIAppDbContext -outDir Controllers -namespace IOT.Controllers
+dotnet-aspnet-codegenerator -p "/home/ivan/Documentos/GIT/IOT/IOT.csproj" controller -name SensorController -api -f -m IOT.Models.Sensor -dc APIAppDbContext -outDir Controllers -namespace IOT.Controllers
+dotnet-aspnet-codegenerator -p "/home/ivan/Documentos/GIT/IOT/IOT.csproj" controller -name LogController -api -f -m IOT.Models.Log -dc APIAppDbContext -outDir Controllers -namespace IOT.Controllers
+
+
+Simmular
+
+
+
+"Tipo":asd",
+"Nombre":sdf",
+"Descripcion":dfg",
+"Funcion":asdfasd",
+"Ubicacion":dsfsd",
+"VoltajeMin":34",
+"VoltajeMax":5
+
+GET
+curl -v --insecure https://localhost:5001/api/Dispositivo
+
+POST
+curl -v -d '{"DispositivoID":NULL,"Tipo":"asd","Nombre":"sdf","Descripcion":"dfg","Funcion":"asdfasd","Ubicacion":"dsfsd","VoltajeMin":34,"VoltajeMax":5}' -H "Content-Type: application/json" --insecure https://localhost:5001/api/Dispositivo
+
+{"MedicionId": ,
+"DispositivoId":1,
+"SensorId":2,
+"Inicio":"getdate",
+"Fin":"getdate",
+"Valor":"prueba"}
+
+curl -v -d '{"DispositivoId":1,"SensorId":2,"Inicio":"getdate","Fin":"getdate","Valor":"prueba"}' -H "Content-Type: application/json" --insecure https://localhost:5001/api/Medicion
+
+
+
+
+###########################################
+
+dotnet publish -c Release -r linux-arm
+cd '/home/ivan/Documentos/GIT/IOT/bin/Release/netcoreapp2.2/linux-arm/publish/'
+python -m SimpleHTTPServer
+
+cd /var/www/InternetOfThings
+sudo wget -r -np -nH -R index.* *.json 192.168.1.145:8000
+sudo chmod +x IOT
+./IOT
+
+###########################################
+sudo nano /etc/apache2/sites-available/internetofthings.conf
+<VirtualHost *:5001>
+  DocumentRoot /var/www/InternetOfThings/wwwroot/
+  ProxyRequests Off
+  ProxyPreserveHost on
+  ProxyPass / http://localhost:5001/
+  ProxyPassReverse / http://localhost:5001/
+  ServerName localhost
+  ErrorLog /var/log/apache2/internetofthings.log
+  CustomLog /var/log/apache2/internetofthings.log common
+</VirtualHost>
+
+
+sudo a2ensite internetofthings
+sudo a2dissite 000-default
+sudo systemctl reload apache2

@@ -29,7 +29,7 @@ namespace IOT.Controllers
 
         // GET: api/Medicion/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Medicion>> GetMedicion(long? id)
+        public async Task<ActionResult<Medicion>> GetMedicion(long id)
         {
             var medicion = await _context.Medicion.FindAsync(id);
 
@@ -43,7 +43,7 @@ namespace IOT.Controllers
 
         // PUT: api/Medicion/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutMedicion(long? id, Medicion medicion)
+        public async Task<IActionResult> PutMedicion(long id, Medicion medicion)
         {
             if (id != medicion.MedicionId)
             {
@@ -75,30 +75,15 @@ namespace IOT.Controllers
         [HttpPost]
         public async Task<ActionResult<Medicion>> PostMedicion(Medicion medicion)
         {
-            //medicion.Fin = DateTime.Now.ToString("yyyy-MM-DD HH:mm:ss");
             _context.Medicion.Add(medicion);
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateException)
-            {
-                if (MedicionExists(medicion.MedicionId))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetMedicion", new { id = medicion.MedicionId }, medicion);
         }
 
         // DELETE: api/Medicion/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Medicion>> DeleteMedicion(long? id)
+        public async Task<ActionResult<Medicion>> DeleteMedicion(long id)
         {
             var medicion = await _context.Medicion.FindAsync(id);
             if (medicion == null)
@@ -112,7 +97,7 @@ namespace IOT.Controllers
             return medicion;
         }
 
-        private bool MedicionExists(long? id)
+        private bool MedicionExists(long id)
         {
             return _context.Medicion.Any(e => e.MedicionId == id);
         }

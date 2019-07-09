@@ -16,6 +16,7 @@ namespace IOT.Models
         }
 
         public virtual DbSet<Dispositivo> Dispositivo { get; set; }
+        public virtual DbSet<Log> Log { get; set; }
         public virtual DbSet<Medicion> Medicion { get; set; }
         public virtual DbSet<Sensor> Sensor { get; set; }
 
@@ -23,8 +24,8 @@ namespace IOT.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-//                optionsBuilder.UseSqlite("Datasource=/home/ivan/InternetOfThings");
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                optionsBuilder.UseSqlite("Datasource=/home/ivan/Documentos/GIT/IOT/InternetOfThings");
             }
         }
 
@@ -35,6 +36,11 @@ namespace IOT.Models
             modelBuilder.Entity<Dispositivo>(entity =>
             {
                 entity.Property(e => e.DispositivoId).ValueGeneratedOnAdd();
+            });
+
+            modelBuilder.Entity<Log>(entity =>
+            {
+                entity.Property(e => e.LogId).ValueGeneratedOnAdd();
             });
 
             modelBuilder.Entity<Medicion>(entity =>
