@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using IOT.Models;
+using wsIOT.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,7 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace IOT
+namespace wsIOT
 {
     public class Startup
     {
@@ -29,7 +29,7 @@ namespace IOT
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<APIAppDbContext>(options =>
-                options.UseSqlite(Configuration.GetConnectionString("IOTDatabase")));
+                options.UseSqlite(Configuration.GetConnectionString("wsIOTDatabase")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

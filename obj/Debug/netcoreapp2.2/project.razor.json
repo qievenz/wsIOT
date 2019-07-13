@@ -1,5 +1,5 @@
 {
-  "FilePath": "/home/ivan/Documentos/GIT/IOT/IOT.csproj",
+  "FilePath": "/home/ivan/Documentos/GIT/Internet Of Things/wsIOT/wsIOT.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2940,6 +2940,6 @@
     ],
     "CSharpLanguageVersion": 703
   },
-  "RootNamespace": "IOT",
+  "RootNamespace": null,
   "Documents": []
 }

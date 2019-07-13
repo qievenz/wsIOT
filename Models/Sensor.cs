@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace IOT.Models
+namespace wsIOT.Models
 {
     public partial class Sensor
     {

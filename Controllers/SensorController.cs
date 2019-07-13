@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using IOT.Models;
+using wsIOT.Models;
 
-namespace IOT.Controllers
+namespace wsIOT.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

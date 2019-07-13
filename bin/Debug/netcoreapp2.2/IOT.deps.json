@@ -22,7 +22,7 @@
   },
   "targets": {
     ".NETCoreApp,Version=v2.2": {
-      "IOT/1.0.0": {
+      "wsIOT/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
@@ -32,10 +32,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3"
         },
         "runtime": {
-          "IOT.dll": {}
+          "wsIOT.dll": {}
         },
         "compile": {
-          "IOT.dll": {}
+          "wsIOT.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
@@ -3721,7 +3721,7 @@
     }
   },
   "libraries": {
-    "IOT/1.0.0": {
+    "wsIOT/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -5241,7 +5241,7 @@
     "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-U3/gsbH7MnxwdHFzruZzhuMqnaFR8+ptziOtLSCWWMwcFUXomFSfOoy56nlxWhM638gKXykGanMzlLCxQuC7rw==",
+      "sha512": "sha512-U3/gsbH7MnxwdHFzruZzhuMqnaFR8+ptzwsIOTLSCWWMwcFUXomFSfOoy56nlxWhM638gKXykGanMzlLCxQuC7rw==",
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple/4.3.0",
       "hashPath": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512"
     },

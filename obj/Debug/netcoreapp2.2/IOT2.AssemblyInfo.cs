@@ -7,10 +7,10 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("IOT")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("wsIOT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("IOT")]
-[assembly: System.Reflection.AssemblyTitleAttribute("IOT")]
+[assembly: System.Reflection.AssemblyProductAttribute("wsIOT")]
+[assembly: System.Reflection.AssemblyTitleAttribute("wsIOT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

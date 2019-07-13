@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace IOT.Models
+namespace wsIOT.Models
 {
     public partial class APIAppDbContext : DbContext
     {
@@ -25,7 +25,7 @@ namespace IOT.Models
             if (!optionsBuilder.IsConfigured)
             {
 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                //optionsBuilder.UseSqlite("Datasource=/home/ivan/Documentos/GIT/IOT/InternetOfThings");
+                //optionsBuilder.UseSqlite("Datasource=/home/ivan/Documentos/GIT/wsIOT/InternetOfThings");
             }
         }
 

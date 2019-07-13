@@ -13283,11 +13283,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ivan/Documentos/GIT/IOT/IOT.csproj",
-      "projectName": "IOT",
-      "projectPath": "/home/ivan/Documentos/GIT/IOT/IOT.csproj",
+      "projectUniqueName": "/home/ivan/Documentos/GIT/Internet Of Things/wsIOT/wsIOT.csproj",
+      "projectName": "wsIOT",
+      "projectPath": "/home/ivan/Documentos/GIT/Internet Of Things/wsIOT/wsIOT.csproj",
       "packagesPath": "/home/ivan/.nuget/packages/",
-      "outputPath": "/home/ivan/Documentos/GIT/IOT/obj/",
+      "outputPath": "/home/ivan/Documentos/GIT/Internet Of Things/wsIOT/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"

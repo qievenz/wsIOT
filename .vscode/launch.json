@@ -15,7 +15,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.2/IOT.dll",
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.2/wsIOT.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
